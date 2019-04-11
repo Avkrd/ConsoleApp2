@@ -27,6 +27,7 @@ namespace ConsoleApp2
                 int bankAccountNumber = int.Parse(accountNumber);
                 bank.BankAccountNumber = bankAccountNumber;
 
+                var bankAddress = bank.GetAdrress();
                 ctx.Users.Add(user);
                 ctx.Banks.Add(bank);
                 ctx.SaveChanges();
