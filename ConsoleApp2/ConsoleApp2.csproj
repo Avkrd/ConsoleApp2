@@ -54,6 +54,7 @@
     <Compile Include="Classes\Bank.cs" />
     <Compile Include="Classes\User.cs" />
     <Compile Include="DB\Db.cs" />
+    <Compile Include="Interface\IMethod.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -61,8 +62,6 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Interface\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,4 +1,5 @@
 ﻿using ConsoleApp2.DB;
+using ConsoleApp2.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp2.Classes
 {
-    class User 
+    class User : IMethod
     {
         /// <summary>
         /// User Identification.
