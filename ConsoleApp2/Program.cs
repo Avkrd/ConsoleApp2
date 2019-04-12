@@ -15,17 +15,13 @@ namespace ConsoleApp2
             using (var ctx = new Db())
             {
                 User user = new User();
-                var name = user.GetName();
+                user.GetName();
                 var address = user.GetAdrress();
 
                 Bank bank = new Bank();
-                Console.WriteLine("enter your bank name");
-                bank.BankName = Console.ReadLine();
+                bank.GetName();
 
-                Console.WriteLine("enter your account number");
-                string accountNumber = Console.ReadLine();
-                int bankAccountNumber = int.Parse(accountNumber);
-                bank.BankAccountNumber = bankAccountNumber;
+                bank.GetBankAccountNumber();
 
                 var bankAddress = bank.GetAdrress();
                 ctx.Users.Add(user);

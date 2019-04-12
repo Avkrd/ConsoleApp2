@@ -1,16 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ConsoleApp2.Classes
 {
+    [Table("AddressInfo")]
     public class Address 
     {
         /// <summary>
         /// Address Identification
         /// </summary>
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key]
         public int AddressID { get; set; }
 
         /// <summary>

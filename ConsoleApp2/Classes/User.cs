@@ -2,17 +2,22 @@
 using ConsoleApp2.Interface;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ConsoleApp2.Classes
 {
+    [Table("UserInfo")]
     class User : IMethod
     {
         /// <summary>
         /// User Identification.
         /// </summary>
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key]
         public int UserId { get; set; }
 
         /// <summary>
@@ -25,18 +30,11 @@ namespace ConsoleApp2.Classes
         /// </summary>
         public string LastName { get; set; }
 
-
         public ICollection<Address> Addresses { get; set; }
+
         public User()
         {
-            this.Addresses = new List<Address>();
-        }
-        public string GetName()
-        {
-            FirstName = Console.ReadLine();
-            LastName = Console.ReadLine();
-            string fullName = FirstName + LastName;
-            return fullName;
+            //this.Addresses = new List<Address>();
         }
 
         // public string GetAdrress()
@@ -75,6 +73,18 @@ namespace ConsoleApp2.Classes
             return fullAdress;
         }
 
+        public void GetName()
+        {
+            FirstName = Console.ReadLine();
+            LastName = Console.ReadLine();
+        }
+
+        public int ConvertToInt(string number)
+        {
+            int bankAccountNumber = int.Parse(number);
+            return bankAccountNumber;
+        }
+
         //public void GetAdrress()
         //{
         //    using (var ctx = new Db())
@@ -88,7 +98,6 @@ namespace ConsoleApp2.Classes
         //            Console.WriteLine("");
         //            ads[i] = Console.ReadLine();
         //        }
-
         //        Address add = new Address(ads);
 
         //        ctx.Addresses.Add(add);
@@ -98,7 +107,6 @@ namespace ConsoleApp2.Classes
         //    }
 
         //}
-
 
         //public string GetAdrress()
         //{

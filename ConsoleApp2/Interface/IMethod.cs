@@ -9,5 +9,9 @@ namespace ConsoleApp2.Interface
     interface IMethod
     {
         string GetAdrress();
+
+        void GetName();
+
+        int ConvertToInt(string accountNumber);
     }
 }
