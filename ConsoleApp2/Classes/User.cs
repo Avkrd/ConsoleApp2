@@ -75,7 +75,9 @@ namespace ConsoleApp2.Classes
 
         public void GetName()
         {
+            Console.WriteLine("Enter your firstname");
             FirstName = Console.ReadLine();
+            Console.WriteLine("Enter your lastname");
             LastName = Console.ReadLine();
         }
 
